@@ -39,6 +39,7 @@
       <li><a href="#home">Home</a></li>
       <li><a href="#categories">Collection</a></li>
       <li><a href="#why-us">Why Us</a></li>
+      <li><a href="#technology">Experience</a></li>
       <li><a href="catalogue.html">Catalogue</a></li>
       <li><a href="#contact">Book Demo</a></li>
     </ul>
@@ -207,9 +208,314 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════
+       TECHNOLOGY & WELLNESS SECTION
+       ═══════════════════════════════════════════════════════ -->
+  <section class="technology" id="technology">
+    <div class="section-heading reveal">
+      <h2>The Technology Behind the Touch</h2>
+      <p>Innovation engineered to restore — every mechanism purpose-built for wellness</p>
+      <span class="section-heading__line"></span>
+    </div>
+
+    <div class="technology__columns">
+      <!-- Technology Column -->
+      <div class="technology__column reveal">
+        <div class="technology__col-header">
+          <span class="technology__col-icon">⚙</span>
+          <h3>Advanced Technology</h3>
+        </div>
+        <div class="technology__cards">
+          <div class="tech-card">
+            <div class="tech-card__symbol">⬡</div>
+            <div class="tech-card__content">
+              <h4>3D Body Scanning</h4>
+              <p>Precision sensors map your unique physiology for a massage tailored to your exact contours</p>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-card__symbol">◈</div>
+            <div class="tech-card__content">
+              <h4>Zero-Gravity Reclining</h4>
+              <p>NASA-inspired positioning distributes weight evenly, eliminating spinal compression entirely</p>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-card__symbol">◎</div>
+            <div class="tech-card__content">
+              <h4>Intelligent Kneading</h4>
+              <p>AI-driven pressure adaptation responds in real-time to muscle tension and feedback signals</p>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-card__symbol">☀</div>
+            <div class="tech-card__content">
+              <h4>Therapeutic Heat Therapy</h4>
+              <p>Precisely calibrated warmth penetrates deep tissue, accelerating recovery at the cellular level</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wellness Column -->
+      <div class="technology__column reveal">
+        <div class="technology__col-header">
+          <span class="technology__col-icon">✦</span>
+          <h3>Health & Wellness Benefits</h3>
+        </div>
+        <div class="technology__cards">
+          <div class="tech-card">
+            <div class="tech-card__symbol">◇</div>
+            <div class="tech-card__content">
+              <h4>Stress Relief</h4>
+              <p>Cortisol reduction through rhythmic pressure — a medically-recognised pathway to calm</p>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-card__symbol">△</div>
+            <div class="tech-card__content">
+              <h4>Muscle Recovery</h4>
+              <p>Targeted deep-tissue work breaks down lactic acid and restores peak muscular performance</p>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-card__symbol">⊕</div>
+            <div class="tech-card__content">
+              <h4>Improved Circulation</h4>
+              <p>Compression patterns stimulate blood flow, nourishing tissues and supporting cardiovascular health</p>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-card__symbol">☽</div>
+            <div class="tech-card__content">
+              <h4>Enhanced Sleep Quality</h4>
+              <p>Evening sessions lower heart rate and prime the nervous system for deeper, restorative rest</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FIND YOUR PERFECT MATCH — QUIZ
+       ═══════════════════════════════════════════════════════ -->
+  <section class="quiz-section" id="quiz">
+    <div class="section-heading reveal">
+      <h2>Find Your Perfect Match</h2>
+      <p>Three questions. Your ideal wellness companion, revealed.</p>
+      <span class="section-heading__line" style="background:var(--gold-shimmer);"></span>
+    </div>
+
+    <div class="quiz-container reveal" id="quizContainer">
+      <!-- Progress bar -->
+      <div class="quiz-progress">
+        <div class="quiz-progress__bar" id="quizProgressBar"></div>
+      </div>
+      <div class="quiz-step-label" id="quizStepLabel">Step 1 of 3</div>
+
+      <!-- Step 1 -->
+      <div class="quiz-step active" id="quizStep1">
+        <h3 class="quiz-question">Where do you hold the most tension?</h3>
+        <div class="quiz-options">
+          <button class="quiz-btn" data-step="1" data-value="chair">Back &amp; Spine</button>
+          <button class="quiz-btn" data-step="1" data-value="leg">Legs &amp; Feet</button>
+          <button class="quiz-btn" data-step="1" data-value="body">Neck &amp; Shoulders</button>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="quiz-step" id="quizStep2">
+        <h3 class="quiz-question">How often do you plan to use your massager?</h3>
+        <div class="quiz-options">
+          <button class="quiz-btn" data-step="2" data-value="daily">Daily — it's a lifestyle</button>
+          <button class="quiz-btn" data-step="2" data-value="regular">Several times a week</button>
+          <button class="quiz-btn" data-step="2" data-value="occasional">Occasionally, when needed</button>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="quiz-step" id="quizStep3">
+        <h3 class="quiz-question">What matters most to you?</h3>
+        <div class="quiz-options">
+          <button class="quiz-btn" data-step="3" data-value="full">Full-body luxury coverage</button>
+          <button class="quiz-btn" data-step="3" data-value="targeted">Precise targeted relief</button>
+          <button class="quiz-btn" data-step="3" data-value="portable">Compact &amp; portable design</button>
+        </div>
+      </div>
+
+      <!-- Result Screen -->
+      <div class="quiz-step quiz-result" id="quizResult">
+        <div class="quiz-result__icon" id="quizResultIcon">✦</div>
+        <p class="quiz-result__label">Your Divine Match</p>
+        <h3 class="quiz-result__title" id="quizResultTitle">Massage Chair</h3>
+        <p class="quiz-result__desc" id="quizResultDesc">Engineered for absolute bliss — a full-body luxury sanctuary built around your unique physiology.</p>
+        <div class="quiz-result__actions">
+          <a href="catalogue.html" class="quiz-cta-btn" id="quizResultLink" data-page-link>Explore Collection →</a>
+          <button class="quiz-restart-btn" id="quizRestartBtn">Retake Quiz</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       TESTIMONIALS CAROUSEL
+       ═══════════════════════════════════════════════════════ -->
+  <section class="testimonials" id="testimonials">
+    <div class="section-heading reveal">
+      <h2>Voices of the Divine</h2>
+      <p>Experiences that transcend the ordinary</p>
+      <span class="section-heading__line"></span>
+    </div>
+
+    <div class="testimonials__carousel reveal" id="testimonialsCarousel">
+      <div class="testimonials__track" id="testimonialsTrack">
+        <!-- Slide 1 -->
+        <div class="testimonial-slide active">
+          <div class="testimonial__quote-mark">&ldquo;</div>
+          <blockquote class="testimonial__text">
+            The moment I reclined into our Divine Touchh chair, the world outside simply ceased to exist. Twenty minutes later, I rose feeling as though I had spent an entire weekend at a Maldivian spa. This is not a product — it is a sanctuary.
+          </blockquote>
+          <div class="testimonial__accent-line"></div>
+          <div class="testimonial__author">
+            <span class="testimonial__name">Radhika Mehta</span>
+            <span class="testimonial__title">Interior Architect, Mumbai</span>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="testimonial-slide">
+          <div class="testimonial__quote-mark">&ldquo;</div>
+          <blockquote class="testimonial__text">
+            I have visited thermal spas across Europe and Asia. The intelligent kneading in our Divine Touchh chair replicates — and in some respects surpasses — the mastery of a seasoned therapist. It knows precisely where I carry my tension.
+          </blockquote>
+          <div class="testimonial__accent-line"></div>
+          <div class="testimonial__author">
+            <span class="testimonial__name">Arjun Kapoor</span>
+            <span class="testimonial__title">Corporate Director, Pune</span>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="testimonial-slide">
+          <div class="testimonial__quote-mark">&ldquo;</div>
+          <blockquote class="testimonial__text">
+            Our leg massager has become the most coveted piece in our home. My husband and I quite literally schedule time around it. The compression sequences are nothing short of extraordinary — circulation restored, sleep transformed.
+          </blockquote>
+          <div class="testimonial__accent-line"></div>
+          <div class="testimonial__author">
+            <span class="testimonial__name">Priya Srinivasan</span>
+            <span class="testimonial__title">Wellness Consultant, Bengaluru</span>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="testimonial-slide">
+          <div class="testimonial__quote-mark">&ldquo;</div>
+          <blockquote class="testimonial__text">
+            The installation team arrived with the quiet precision of a gallery curator handling a masterpiece. The experience — from purchase to daily ritual — has been impeccably curated at every single touchpoint.
+          </blockquote>
+          <div class="testimonial__accent-line"></div>
+          <div class="testimonial__author">
+            <span class="testimonial__name">Vikram Nair</span>
+            <span class="testimonial__title">Architect &amp; Connoisseur, Delhi</span>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="testimonial-slide">
+          <div class="testimonial__quote-mark">&ldquo;</div>
+          <blockquote class="testimonial__text">
+            As a physiotherapist, I scrutinise wellness products rigorously. Divine Touchh is the first consumer massager I recommend without reservation. The biomechanical intelligence is genuinely clinical-grade.
+          </blockquote>
+          <div class="testimonial__accent-line"></div>
+          <div class="testimonial__author">
+            <span class="testimonial__name">Dr. Ananya Bose</span>
+            <span class="testimonial__title">Physiotherapist, Kolkata</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="testimonials__controls">
+        <button class="testimonials__arrow testimonials__arrow--prev" id="testimonialPrev" aria-label="Previous testimonial">&#8249;</button>
+        <div class="testimonials__dots" id="testimonialsDots">
+          <button class="testimonial-dot active" data-index="0" aria-label="Testimonial 1"></button>
+          <button class="testimonial-dot" data-index="1" aria-label="Testimonial 2"></button>
+          <button class="testimonial-dot" data-index="2" aria-label="Testimonial 3"></button>
+          <button class="testimonial-dot" data-index="3" aria-label="Testimonial 4"></button>
+          <button class="testimonial-dot" data-index="4" aria-label="Testimonial 5"></button>
+        </div>
+        <button class="testimonials__arrow testimonials__arrow--next" id="testimonialNext" aria-label="Next testimonial">&#8250;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       WHITE-GLOVE SERVICE GUARANTEES
+       ═══════════════════════════════════════════════════════ -->
+  <section class="guarantees" id="guarantees">
+    <div class="section-heading reveal">
+      <h2>The Divine Promise</h2>
+      <p>Every purchase is a covenant of excellence</p>
+      <span class="section-heading__line"></span>
+    </div>
+
+    <div class="guarantees__grid reveal-stagger">
+      <div class="guarantee-card">
+        <div class="guarantee-card__icon">⌂</div>
+        <h3>Complimentary<br>Home Installation</h3>
+        <p>Our white-glove concierge team delivers, assembles, and calibrates your machine in your chosen space — seamlessly, professionally, perfectly.</p>
+        <div class="guarantee-card__shimmer"></div>
+      </div>
+      <div class="guarantee-card guarantee-card--featured">
+        <div class="guarantee-card__icon">◈</div>
+        <h3>Extended<br>Warranty Coverage</h3>
+        <p>Comprehensive protection that goes far beyond industry standards. Every component, every mechanism — covered with the assurance you deserve.</p>
+        <div class="guarantee-card__shimmer"></div>
+      </div>
+      <div class="guarantee-card">
+        <div class="guarantee-card__icon">✦</div>
+        <h3>Dedicated<br>Maintenance</h3>
+        <p>A personal wellness care specialist assigned to your account — for routine servicing, technical queries, and priority support whenever you need it.</p>
+        <div class="guarantee-card__shimmer"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       DIGITAL LOOKBOOK LEAD CAPTURE
+       ═══════════════════════════════════════════════════════ -->
+  <section class="lookbook" id="lookbook">
+    <div class="lookbook__inner reveal">
+      <div class="lookbook__text">
+        <span class="lookbook__eyebrow">Exclusive Access</span>
+        <h2>The Divine Touchh<br>Digital Lookbook</h2>
+        <p>Immerse yourself in the full world of Divine Touchh — curated collections, technology deep-dives, and bespoke wellness guidance, delivered to your inbox.</p>
+      </div>
+      <form class="lookbook__form" id="lookbookForm" onsubmit="return false;">
+        <div class="lookbook__form-group">
+          <input
+            type="email"
+            id="lookbookEmail"
+            class="lookbook__input"
+            placeholder="Enter your email address"
+            required
+            aria-label="Email address"
+          />
+          <button type="submit" class="lookbook__submit-btn" id="lookbookSubmitBtn">
+            Request Lookbook
+          </button>
+        </div>
+        <p class="lookbook__disclaimer">Your privacy is sacred to us. No spam — ever.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
        CTA — BOOK YOUR DEMO
        ═══════════════════════════════════════════════════════ -->
   <section class="cta-section reveal">
+
     <h2>Experience the Divine Difference</h2>
     <p>Schedule a personal demonstration at your convenience</p>
     <a href="#contact" class="cta-btn">Book Your Demo Now</a>

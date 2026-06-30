@@ -289,6 +289,207 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ═══════════════════════════════════════════════════════════
+  // QUIZ — 3-Step State Machine
+  // ═══════════════════════════════════════════════════════════
+  const quizContainer = document.getElementById('quizContainer');
+  if (quizContainer) {
+    const quizSteps    = [
+      document.getElementById('quizStep1'),
+      document.getElementById('quizStep2'),
+      document.getElementById('quizStep3'),
+    ];
+    const quizResult       = document.getElementById('quizResult');
+    const quizProgressBar  = document.getElementById('quizProgressBar');
+    const quizStepLabel    = document.getElementById('quizStepLabel');
+    const quizResultTitle  = document.getElementById('quizResultTitle');
+    const quizResultDesc   = document.getElementById('quizResultDesc');
+    const quizResultLink   = document.getElementById('quizResultLink');
+    const quizResultIcon   = document.getElementById('quizResultIcon');
+    const quizRestartBtn   = document.getElementById('quizRestartBtn');
+
+    let currentStep = 0;
+    const answers   = {};
+
+    // Result map: weighted scoring
+    const recommendations = {
+      chair: {
+        icon: '⬛',
+        title: 'Massage Chair',
+        desc: 'Engineered for absolute bliss — a full-body luxury sanctuary built precisely around your unique physiology. The ultimate home spa experience.',
+        link: 'catalogue.html#massage-chairs',
+      },
+      leg: {
+        icon: '◇',
+        title: 'Leg Massager',
+        desc: 'Targeted pressure therapy for revitalized mobility — expertly designed to restore circulation, ease fatigue, and transform weary legs.',
+        link: 'catalogue.html#leg-massagers',
+      },
+      body: {
+        icon: '◎',
+        title: 'Body Massager',
+        desc: 'Deep tissue precision for whole-body restoration — compact, powerful, and crafted for the discerning individual who demands excellence.',
+        link: 'catalogue.html#body-massagers',
+      },
+    };
+
+    function setStep(stepIndex) {
+      // Exit current
+      const currentEl = stepIndex === 0
+        ? quizSteps[0]
+        : (stepIndex <= quizSteps.length ? quizSteps[stepIndex - 1] : quizResult);
+
+      quizSteps.forEach(s => s.classList.remove('active'));
+      quizResult.classList.remove('active');
+
+      if (stepIndex < quizSteps.length) {
+        quizSteps[stepIndex].classList.add('active');
+        quizProgressBar.style.width = ((stepIndex + 1) / quizSteps.length * 100) + '%';
+        quizStepLabel.textContent = `Step ${stepIndex + 1} of ${quizSteps.length}`;
+        quizProgressBar.parentElement.style.display = '';
+        quizStepLabel.style.display = '';
+      } else {
+        // Show result
+        quizProgressBar.style.width = '100%';
+        quizStepLabel.style.display = 'none';
+
+        const result = computeResult();
+        const rec    = recommendations[result];
+        quizResultIcon.textContent  = rec.icon;
+        quizResultTitle.textContent = rec.title;
+        quizResultDesc.textContent  = rec.desc;
+        quizResultLink.setAttribute('href', rec.link);
+
+        quizResult.classList.add('active');
+      }
+      currentStep = stepIndex;
+    }
+
+    function computeResult() {
+      // Q1 directly selects primary category
+      if (answers[1] === 'chair') return 'chair';
+      if (answers[1] === 'leg')   return 'leg';
+      // Neck/shoulder => body massager, but Q3 can refine
+      if (answers[3] === 'full')      return 'chair';
+      if (answers[3] === 'targeted')  return 'leg';
+      if (answers[3] === 'portable')  return 'body';
+      return 'body';
+    }
+
+    // Attach listeners to all quiz buttons
+    quizContainer.querySelectorAll('.quiz-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const step  = parseInt(btn.dataset.step, 10);
+        const value = btn.dataset.value;
+        answers[step] = value;
+        setStep(step); // move to next step (step 1 → index 1, etc.)
+      });
+    });
+
+    // Restart
+    quizRestartBtn.addEventListener('click', () => {
+      Object.keys(answers).forEach(k => delete answers[k]);
+      quizProgressBar.parentElement.style.display = '';
+      setStep(0);
+    });
+
+    // Init
+    setStep(0);
+  }
+
+  // ═══════════════════════════════════════════════════════════
+  // TESTIMONIALS CAROUSEL
+  // ═══════════════════════════════════════════════════════════
+  const carousel = document.getElementById('testimonialsCarousel');
+  if (carousel) {
+    const slides      = carousel.querySelectorAll('.testimonial-slide');
+    const dots        = carousel.querySelectorAll('.testimonial-dot');
+    const prevBtn     = document.getElementById('testimonialPrev');
+    const nextBtn     = document.getElementById('testimonialNext');
+    let currentSlide  = 0;
+    let autoTimer     = null;
+
+    function goToSlide(index) {
+      slides[currentSlide].classList.remove('active');
+      dots[currentSlide].classList.remove('active');
+
+      currentSlide = (index + slides.length) % slides.length;
+
+      slides[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
+
+      // Re-trigger accent line animation by removing/adding class
+      const accLine = slides[currentSlide].querySelector('.testimonial__accent-line');
+      if (accLine) {
+        accLine.style.width = '0';
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            accLine.style.width = '80px';
+          });
+        });
+      }
+    }
+
+    function startAuto() {
+      autoTimer = setInterval(() => goToSlide(currentSlide + 1), 5000);
+    }
+
+    function stopAuto() {
+      clearInterval(autoTimer);
+    }
+
+    prevBtn.addEventListener('click', () => { stopAuto(); goToSlide(currentSlide - 1); startAuto(); });
+    nextBtn.addEventListener('click', () => { stopAuto(); goToSlide(currentSlide + 1); startAuto(); });
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        stopAuto();
+        goToSlide(parseInt(dot.dataset.index, 10));
+        startAuto();
+      });
+    });
+
+    // Pause on hover
+    carousel.addEventListener('mouseenter', stopAuto);
+    carousel.addEventListener('mouseleave', startAuto);
+
+    // Init accent line for first slide
+    const firstAccLine = slides[0].querySelector('.testimonial__accent-line');
+    if (firstAccLine) {
+      setTimeout(() => { firstAccLine.style.width = '80px'; }, 600);
+    }
+
+    startAuto();
+  }
+
+  // ═══════════════════════════════════════════════════════════
+  // LOOKBOOK FORM — Display only, visual feedback
+  // ═══════════════════════════════════════════════════════════
+  const lookbookForm = document.getElementById('lookbookForm');
+  if (lookbookForm) {
+    lookbookForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn          = document.getElementById('lookbookSubmitBtn');
+      const emailInput   = document.getElementById('lookbookEmail');
+      const originalText = btn.textContent;
+
+      btn.textContent        = '✦ Lookbook Sent!';
+      btn.style.background   = 'var(--gold-shimmer)';
+      btn.style.color        = 'var(--espresso)';
+      emailInput.value       = '';
+      emailInput.disabled    = true;
+      btn.disabled           = true;
+
+      setTimeout(() => {
+        btn.textContent      = originalText;
+        btn.style.background = '';
+        btn.style.color      = '';
+        emailInput.disabled  = false;
+        btn.disabled         = false;
+      }, 3000);
+    });
+  }
+
   // Initial calls
   updateScrollProgress();
   handleNavbarScroll();
