@@ -19,7 +19,7 @@ export const CONTACT = {
 };
 
 export const DEVELOPER = {
-  name: "Jinendra Banthia",
+  name: "Jinendra Banthia & Arnab Sharma",
   phone: "9124483008",
   email: "jinendra.banthia.iter@gmail.com",
 };

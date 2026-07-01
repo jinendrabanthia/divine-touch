@@ -1,105 +1,40 @@
-# Divine Touch — Image Assets Manifest
+# Divine Touch — Image Assets Guide
 
-This document outlines all the image assets required to replace the placeholders currently visible on the website.
+To update the images on the website, simply create folders inside the `public/images/` directory and add your real images there. 
 
-> **Note**: For best results, save your images in the `public/images/` folder following the exact paths listed below. The website will automatically pick them up once the code is updated with the correct filenames.
+Here is a simple guide on what should be kept where:
 
-## Brand & Global
+## 1. Global & Home Page
+- **Website Logo:** Save as `public/images/logo.png` *(Recommended: Square 200x200px)*
+- **Main Hero Image:** Save as `public/images/hero/main.jpg` *(Recommended: Landscape 1200x900px)*
 
-| Description | Target Path | Recommended Size | Aspect Ratio |
-|---|---|---|---|
-| **Logo** | `/public/images/logo.png` | 200 × 200px | 1:1 (Square) |
+## 2. Product Categories (Home Page)
+*These are the icons used on the home page for different product types. They should be perfectly square (1:1 ratio) so they crop nicely into circles.*
+- **Where to put them:** `public/images/categories/`
+- **File Names:** `massage-chairs.jpg`, `leg-massagers.jpg`, `scalp-massagers.jpg`, `other.jpg`
 
-## Home Page (`/`)
+## 3. Products
+*Create a folder for each product model. Inside each folder, place 3 images: `front.jpg`, `side.jpg`, and `detail.jpg`. They should be perfectly square (1:1 ratio).*
+- **Where to put them:** `public/images/products/<model-name>/`
+- **Examples:** 
+  - `public/images/products/amb-007-b/front.jpg`
+  - `public/images/products/am-006-b/side.jpg`
+  - `public/images/products/am-009/detail.jpg`
 
-| Description | Target Path | Recommended Size | Aspect Ratio |
-|---|---|---|---|
-| **Hero Image** | `/public/images/hero/main.jpg` | 1200 × 900px | 4:3 |
+## 4. Testimonials (Customer Reviews)
+*These are the photos of the customers for the reviews page. They should be perfectly square (1:1 ratio).*
+- **Where to put them:** `public/images/testimonials/`
+- **File Names:** `customer-1.jpg`, `customer-2.jpg`, `customer-3.jpg`, etc.
 
-## Category Tiles (Home Page)
-
-> **Important**: These must be perfectly square (1:1 aspect ratio) so they crop perfectly into circles.
-
-| Description | Target Path | Recommended Size | Aspect Ratio |
-|---|---|---|---|
-| **Massage Chairs** | `/public/images/categories/massage-chairs.jpg` | 800 × 800px | 1:1 (Square) |
-| **Leg & Foot Massagers** | `/public/images/categories/leg-massagers.jpg` | 800 × 800px | 1:1 (Square) |
-| **Scalp Massagers** | `/public/images/categories/scalp-massagers.jpg` | 800 × 800px | 1:1 (Square) |
-| **Full Body Massagers** | `/public/images/categories/other.jpg` | 800 × 800px | 1:1 (Square) |
-
-## Testimonial Avatars (Home Page)
-
-> **Important**: These must be perfectly square (1:1 aspect ratio) so they crop perfectly into circles.
-
-| Description | Target Path | Recommended Size | Aspect Ratio |
-|---|---|---|---|
-| **Customer 1** | `/public/images/testimonials/customer-1.jpg` | 200 × 200px | 1:1 (Square) |
-| **Customer 2** | `/public/images/testimonials/customer-2.jpg` | 200 × 200px | 1:1 (Square) |
-| **Customer 3** | `/public/images/testimonials/customer-3.jpg` | 200 × 200px | 1:1 (Square) |
-
-## About Page (`/about`)
-
-| Description | Target Path | Recommended Size | Aspect Ratio |
-|---|---|---|---|
-| **Brand/Team Photo** | `/public/images/about/brand-story.jpg` | 800 × 600px | 4:3 |
-
-## Products
-
-*These images are used on both the Product Cards (grid view) and the Product Detail page gallery.*
-
-### AMB 007 B
-| Description | Target Path | Recommended Size | Aspect Ratio |
-|---|---|---|---|
-| **Front Angle** | `/public/images/products/amb-007-b/front.jpg` | 800 × 800px | 1:1 |
-| **Side Angle** | `/public/images/products/amb-007-b/side.jpg` | 800 × 800px | 1:1 |
-| **Detail View** | `/public/images/products/amb-007-b/detail.jpg` | 800 × 800px | 1:1 |
-
-### AM 006 B
-| Description | Target Path | Recommended Size | Aspect Ratio |
-|---|---|---|---|
-| **Front Angle** | `/public/images/products/am-006-b/front.jpg` | 800 × 800px | 1:1 |
-| **Side Angle** | `/public/images/products/am-006-b/side.jpg` | 800 × 800px | 1:1 |
-| **Detail View** | `/public/images/products/am-006-b/detail.jpg` | 800 × 800px | 1:1 |
-
-### AM 009
-| Description | Target Path | Recommended Size | Aspect Ratio |
-|---|---|---|---|
-| **Front Angle** | `/public/images/products/am-009/front.jpg` | 800 × 800px | 1:1 |
-| **Side Angle** | `/public/images/products/am-009/side.jpg` | 800 × 800px | 1:1 |
-| **Detail View** | `/public/images/products/am-009/detail.jpg` | 800 × 800px | 1:1 |
-
-### AM 444 N
-| Description | Target Path | Recommended Size | Aspect Ratio |
-|---|---|---|---|
-| **Front Angle** | `/public/images/products/am-444-n/front.jpg` | 800 × 800px | 1:1 |
-| **Side Angle** | `/public/images/products/am-444-n/side.jpg` | 800 × 800px | 1:1 |
-| **Detail View** | `/public/images/products/am-444-n/detail.jpg` | 800 × 800px | 1:1 |
-
-### AM 888
-| Description | Target Path | Recommended Size | Aspect Ratio |
-|---|---|---|---|
-| **Front Angle** | `/public/images/products/am-888/front.jpg` | 800 × 800px | 1:1 |
-| **Side Angle** | `/public/images/products/am-888/side.jpg` | 800 × 800px | 1:1 |
-| **Detail View** | `/public/images/products/am-888/detail.jpg` | 800 × 800px | 1:1 |
-
-### AM 333
-| Description | Target Path | Recommended Size | Aspect Ratio |
-|---|---|---|---|
-| **Front Angle** | `/public/images/products/am-333/front.jpg` | 800 × 800px | 1:1 |
-| **Side Angle** | `/public/images/products/am-333/side.jpg` | 800 × 800px | 1:1 |
-| **Detail View** | `/public/images/products/am-333/detail.jpg` | 800 × 800px | 1:1 |
-
-### AM 6666
-| Description | Target Path | Recommended Size | Aspect Ratio |
-|---|---|---|---|
-| **Front Angle** | `/public/images/products/am-6666/front.jpg` | 800 × 800px | 1:1 |
-| **Side Angle** | `/public/images/products/am-6666/side.jpg` | 800 × 800px | 1:1 |
-| **Detail View** | `/public/images/products/am-6666/detail.jpg` | 800 × 800px | 1:1 |
+## 5. About Page
+*The main image showing your brand's story or team.*
+- **Where to put it:** `public/images/about/brand-story.jpg` *(Recommended: Landscape 800x600px)*
 
 ---
 
-### How to update an image:
-1. Save the real image file to the corresponding folder in `public/images/`.
-2. Open `src/data/products.ts` (for products) or the relevant component.
-3. Update the `src` property to point to the real image path (e.g., `src: "/images/products/amb-007-b/front.jpg"`).
-4. The `ImagePlaceholder` component will automatically render the real image instead of the placeholder box.
+### How to link them to the website?
+Once you save an image in the correct folder, you need to tell the website code where it is.
+1. Open the data file: `src/data/products.ts` (for products) or `src/components/home/TestimonialsSection.tsx` (for reviews).
+2. Find the image property (it currently says something like `"Placeholder"`).
+3. Change it to the path of your new image, starting with `/images/...`
+4. **Example:** `image: "/images/products/am-009/front.jpg"`

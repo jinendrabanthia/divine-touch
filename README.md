@@ -67,6 +67,10 @@ The Divine Touch interface is built around the concept of "Premium Wellness". Ev
 - **Motion**: Animations are buttery smooth, utilizing spring physics (via Framer Motion) and robust timelines (via GSAP) to prevent jarring transitions.
 - **Glassmorphism**: Subtle blurs, transparent backgrounds, and soft shadows are used to create depth without clutter.
 
+## 👨‍💻 Developers
+
+Website designed & developed by **Jinendra Banthia** & **Arnab Sharma**.
+
 ## 📄 License
 
 This project is proprietary and created for Divine Touch. All rights reserved.
