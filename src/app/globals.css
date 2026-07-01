@@ -1,26 +1,129 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ═══════════════════════════════════════════════════════
+   DIVINE TOUCH — Design System (Tailwind v4 @theme)
+   ═══════════════════════════════════════════════════════ */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* ── Brand Colors (from logo) ──────────────────────── */
+  --color-gold-300: #E8C97A;
+  --color-gold-400: #D4A843;
+  --color-gold-500: #B8860B;
+  --color-gold-600: #8B6914;
+  --color-gold-700: #6B5210;
+
+  --color-cream-50: #FFF9F0;
+  --color-cream-100: #FFF3E0;
+  --color-cream-200: #FDECD0;
+
+  --color-brown-300: #A1887F;
+  --color-brown-500: #795548;
+  --color-brown-700: #5D4037;
+  --color-brown-800: #4E342E;
+  --color-brown-900: #3E2723;
+
+  --color-charcoal-800: #2D2D2D;
+  --color-charcoal-900: #1A1A1A;
+
+  --color-whatsapp: #25D366;
+  --color-whatsapp-dark: #128C7E;
+
+  /* ── Fonts ─────────────────────────────────────────── */
+  --font-heading: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+
+  /* ── Animations ────────────────────────────────────── */
+  --animate-pulse-gentle: pulse-gentle 2.5s ease-in-out infinite;
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-shimmer: shimmer 2s linear infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ── Keyframes ───────────────────────────────────────── */
+@keyframes pulse-gentle {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+  50% { transform: scale(1.08); box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ── Base Styles ─────────────────────────────────────── */
+:root {
+  --background: #FFF9F0;
+  --foreground: #3E2723;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+}
+
+/* ── Typography ──────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-brown-900);
+}
+
+/* ── Selection ───────────────────────────────────────── */
+::selection {
+  background: var(--color-gold-300);
+  color: var(--color-brown-900);
+}
+
+/* ── Scrollbar ───────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream-100);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-400);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-500);
+}
+
+/* ── Reduced Motion ──────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ── Gold Gradient Text ──────────────────────────────── */
+.text-gold-gradient {
+  background: linear-gradient(135deg, var(--color-gold-600), var(--color-gold-400), var(--color-gold-600));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Image Placeholder Pattern ───────────────────────── */
+.placeholder-pattern {
+  background-image: 
+    linear-gradient(45deg, var(--color-cream-200) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--color-cream-200) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--color-cream-200) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--color-cream-200) 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
 }
