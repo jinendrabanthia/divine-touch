@@ -30,8 +30,8 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-full border-2 border-gold-500 bg-cream-100 flex items-center justify-center">
-                <span className="font-heading font-bold text-brown-900 text-sm">DT</span>
+              <div className="w-16 h-16 rounded-full flex items-center justify-center overflow-hidden shrink-0">
+                <img src="/images/logo.png" alt="Divine Touch Logo" className="w-full h-full object-cover" />
               </div>
               <div>
                 <h3 className="font-heading font-bold text-lg text-cream-50">Divine Touch</h3>

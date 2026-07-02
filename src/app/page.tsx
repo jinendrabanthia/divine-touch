@@ -3,7 +3,9 @@ import TrustStrip from "@/components/home/TrustStrip";
 import ProductCarousel from "@/components/home/ProductCarousel";
 import CategoryTiles from "@/components/home/CategoryTiles";
 import WhyDivineTouch from "@/components/home/WhyDivineTouch";
+import VideoShowcase from "@/components/home/VideoShowcase";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
+import SocialFeed from "@/components/home/SocialFeed";
 import FaqAccordion from "@/components/home/FaqAccordion";
 import CtaBanner from "@/components/home/CtaBanner";
 
@@ -15,7 +17,9 @@ export default function Home() {
       <ProductCarousel />
       <CategoryTiles />
       <WhyDivineTouch />
+      <VideoShowcase />
       <TestimonialsSection />
+      <SocialFeed />
       <FaqAccordion />
       <CtaBanner />
     </div>

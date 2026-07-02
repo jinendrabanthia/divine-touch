@@ -31,12 +31,14 @@ const benefits = [
   },
 ];
 
+import MagicBento from "@/components/shared/MagicBento";
+
 export default function WhyDivineTouch() {
   return (
     <section className="py-20 bg-gradient-to-br from-brown-900 via-charcoal-900 to-brown-900 text-cream-50 relative overflow-hidden">
       {/* Decorative */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-gold-400/5 rounded-full blur-3xl" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-72 h-72 bg-gold-400/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionReveal>
@@ -51,34 +53,22 @@ export default function WhyDivineTouch() {
           </div>
         </SectionReveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {benefits.map((benefit, index) => (
-            <SectionReveal key={benefit.title} delay={index * 0.12}>
-              <BorderGlow 
-                edgeSensitivity={30} 
-                glowColor="255 215 0" // Gold rgb
-                backgroundColor="transparent"
-                borderRadius={20}
-                glowRadius={60}
-                glowIntensity={1}
-                animated={false}
-                className="h-full"
-              >
-                <div className="text-center group p-6 bg-charcoal-800/30 rounded-[19px] h-full border border-gold-500/10 hover:bg-charcoal-800/50 transition-colors">
-                  <div className="w-16 h-16 mx-auto mb-5 rounded-2xl bg-gold-500/10 border border-gold-500/20 flex items-center justify-center group-hover:bg-gold-500/20 group-hover:scale-110 transition-all duration-300">
-                    <benefit.icon className="w-7 h-7 text-gold-400 group-hover:rotate-12 transition-transform" />
-                  </div>
-                  <h3 className="font-heading font-semibold text-lg mb-2">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-brown-300 text-sm leading-relaxed">
-                    {benefit.description}
-                  </p>
-                </div>
-              </BorderGlow>
-            </SectionReveal>
-          ))}
-        </div>
+        <SectionReveal delay={0.2}>
+          <div className="relative mx-auto flex justify-center">
+            <MagicBento 
+              textAutoHide={false}
+              enableStars={true}
+              enableSpotlight={true}
+              enableBorderGlow={true}
+              enableTilt={true}
+              enableMagnetism={true}
+              clickEffect={true}
+              spotlightRadius={400}
+              particleCount={15}
+              glowColor="212, 175, 55"
+            />
+          </div>
+        </SectionReveal>
       </div>
     </section>
   );

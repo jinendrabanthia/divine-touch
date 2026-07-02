@@ -226,7 +226,7 @@ const PillNav = ({
   return (
     <div className="pill-nav-container">
       <nav className={`pill-nav ${className}`} aria-label="Primary" style={cssVars}>
-        {isRouterLink(items?.[0]?.href) ? (
+        {logo && (isRouterLink(items?.[0]?.href) ? (
           <Link
             className="pill-logo"
             href={items[0].href}
@@ -251,7 +251,7 @@ const PillNav = ({
           >
             {typeof logo === 'string' ? <img src={logo} alt={logoAlt} ref={logoImgRef} /> : <div ref={logoImgRef as any}>{logo}</div>}
           </a>
-        )}
+        ))}
 
         <div className="pill-nav-items desktop-only" ref={navItemsRef}>
           <ul className="pill-list" role="menubar">

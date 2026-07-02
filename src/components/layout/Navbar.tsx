@@ -19,12 +19,15 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 left-0 w-full z-50 flex justify-center py-4 bg-cream-50/80 backdrop-blur-md border-b border-cream-200/50 pointer-events-auto transition-all min-h-[80px]">
+      {/* Main Logo - floating left */}
+      <div className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 pointer-events-auto">
+        <a href="/">
+          <img src="/images/logo.png" alt="Divine Touch Logo" className="h-14 sm:h-16 w-auto object-contain" />
+        </a>
+      </div>
+
       <div className="pointer-events-auto w-full max-w-7xl px-4 sm:px-6 flex justify-center">
         <PillNav
-          logo={
-            <div className="font-heading font-bold text-brown-900 text-sm">DT</div>
-          }
-          logoAlt="Divine Touch Logo"
           items={navLinks}
           activeHref={pathname}
           baseColor="#d4af37" // Gold for the wrapper and hover circle
