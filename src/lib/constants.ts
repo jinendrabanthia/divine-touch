@@ -16,6 +16,7 @@ export const CONTACT = {
     number: "+918280030648",
     display: "+91 82800 30648",
   },
+  instagram: "https://www.instagram.com/divin_touch_?igsh=MXdvdGVkOTlicjNqZg==",
 };
 
 export const DEVELOPER = {

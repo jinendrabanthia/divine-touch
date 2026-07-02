@@ -23,6 +23,8 @@ const InstagramIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+import { CONTACT } from "@/lib/constants";
+
 const posts = [
   { id: 1, image: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=400&auto=format&fit=crop", size: "small" },
   { id: 2, image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=600&auto=format&fit=crop", size: "large" },
@@ -43,11 +45,13 @@ export default function SocialFeed() {
                 Join the Community
               </span>
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-brown-900 mt-2">
-                @DivineTouch.Luxury
+                @divin_touch_
               </h2>
             </div>
             <a
-              href="#"
+              href={CONTACT.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-brown-900 text-white rounded-full hover:bg-gold-600 transition-colors duration-300 font-medium"
             >
               <InstagramIcon className="w-5 h-5" />
@@ -59,8 +63,11 @@ export default function SocialFeed() {
         <FadeContent blur duration={1200} delay={0.2}>
           <div className="columns-2 md:columns-3 gap-4 space-y-4">
             {posts.map((post, index) => (
-              <div 
+              <a 
                 key={post.id} 
+                href={CONTACT.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="relative group rounded-2xl overflow-hidden cursor-pointer inline-block w-full"
               >
                 <div className="absolute inset-0 bg-charcoal-900/0 group-hover:bg-charcoal-900/30 transition-colors duration-300 z-10" />
@@ -72,7 +79,7 @@ export default function SocialFeed() {
                   alt={`Social post ${post.id}`}
                   className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
                 />
-              </div>
+              </a>
             ))}
           </div>
         </FadeContent>

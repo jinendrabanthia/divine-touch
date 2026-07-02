@@ -46,14 +46,16 @@ export default function Footer() {
             {/* Social Icons */}
             <div className="flex items-center gap-3 mt-6">
               {[
-                { icon: SocialIcons.Instagram, label: "Instagram" },
-                { icon: SocialIcons.Facebook, label: "Facebook" },
-                { icon: SocialIcons.Youtube, label: "YouTube" },
-                { icon: SocialIcons.Twitter, label: "Twitter" },
-              ].map(({ icon: Icon, label }) => (
+                { icon: SocialIcons.Instagram, label: "Instagram", url: CONTACT.instagram },
+                { icon: SocialIcons.Facebook, label: "Facebook", url: "#" },
+                { icon: SocialIcons.Youtube, label: "YouTube", url: "#" },
+                { icon: SocialIcons.Twitter, label: "Twitter", url: "#" },
+              ].map(({ icon: Icon, label, url }) => (
                 <a
                   key={label}
-                  href="#"
+                  href={url}
+                  target={url !== "#" ? "_blank" : undefined}
+                  rel={url !== "#" ? "noopener noreferrer" : undefined}
                   aria-label={label}
                   className="w-9 h-9 rounded-full border border-brown-700 flex items-center justify-center text-brown-300 hover:border-gold-500 hover:text-gold-400 transition-all duration-300 hover:scale-110"
                 >
