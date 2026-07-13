@@ -19,7 +19,7 @@ const galleryItems = [
     id: 2,
     title: "Leg Massager Pro",
     category: "Leg Massagers",
-    image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=800&auto=format&fit=crop",
+    image: "https://6a551c6135c84f09d233f302.imgix.net/sandbox/1870.jpg",
     size: "small"
   },
   {
@@ -31,21 +31,21 @@ const galleryItems = [
   },
   {
     id: 4,
-    title: "Foot Spa Setup",
+    title: "Sample Foot Massager",
     category: "Leg Massagers",
     image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=800&auto=format&fit=crop",
     size: "medium"
   },
   {
     id: 5,
-    title: "Therapy Stones",
-    category: "Accessories",
+    title: "Sample Foot Massager2",
+    category: "Leg Massagers",
     image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=800&auto=format&fit=crop",
     size: "small"
   },
   {
     id: 6,
-    title: "Luxury Lounge",
+    title: "AM-888",
     category: "Massage Chairs",
     image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800&auto=format&fit=crop",
     size: "large"
