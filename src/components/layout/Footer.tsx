@@ -34,7 +34,7 @@ export default function Footer() {
                 <img src="/images/logo.png" alt="Divine Touch Logo" className="w-full h-full object-cover" />
               </div>
               <div>
-                <h3 className="font-heading font-bold text-lg text-cream-50">Divine Touch</h3>
+                <h3 className="font-heading font-bold text-lg" style={{ color: "#FE7F2D" }}>Divine Touch</h3>
                 <p className="text-gold-400 text-xs tracking-wider uppercase">Massage Chair</p>
               </div>
             </div>
@@ -67,7 +67,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading font-semibold text-cream-50 mb-4 text-base">Quick Links</h4>
+            <h4 className="font-heading font-semibold mb-4 text-base" style={{ color: "#FE7F2D" }}>Quick Links</h4>
             <ul className="space-y-2.5">
               {[
                 { href: "/", label: "Home" },
@@ -89,7 +89,7 @@ export default function Footer() {
 
           {/* Categories */}
           <div>
-            <h4 className="font-heading font-semibold text-cream-50 mb-4 text-base">Categories</h4>
+            <h4 className="font-heading font-semibold mb-4 text-base" style={{ color: "#FE7F2D" }}>Categories</h4>
             <ul className="space-y-2.5">
               {CATEGORIES.map((cat) => (
                 <li key={cat.slug}>
@@ -106,7 +106,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-heading font-semibold text-cream-50 mb-4 text-base">Contact Us</h4>
+            <h4 className="font-heading font-semibold mb-4 text-base" style={{ color: "#FE7F2D" }}>Contact Us</h4>
             <div className="space-y-3">
               <a
                 href={getDefaultWhatsAppUrl()}
