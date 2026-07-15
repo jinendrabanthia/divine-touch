@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Phone, MessageCircle, Mail, MapPin } from "lucide-react";
+import { Phone, MessageCircle, Mail, MapPin, Clock } from "lucide-react";
 import { BRAND, CONTACT, DEVELOPER, CATEGORIES } from "@/lib/constants";
 import { getDefaultWhatsAppUrl } from "@/lib/whatsapp";
 
@@ -29,13 +29,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-16 h-16 rounded-full flex items-center justify-center overflow-hidden shrink-0">
-                <img src="/images/logo.png" alt="Divine Touch Logo" className="w-full h-full object-cover" />
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-24 h-24 rounded-full bg-white shrink-0 flex items-center justify-center shadow-md border border-brown-700/50">
+                <img src="/images/logo.png" alt="Divine Touch Logo" className="w-[90%] h-[90%] object-contain rounded-full" />
               </div>
               <div>
-                <h3 className="font-heading font-bold text-lg" style={{ color: "#FE7F2D" }}>Divine Touch</h3>
-                <p className="text-gold-400 text-xs tracking-wider uppercase">Massage Chair</p>
+                <h3 className="font-heading font-bold text-xl" style={{ color: "#FE7F2D" }}>Divine Touch</h3>
+                <p className="text-gold-400 text-sm tracking-wider uppercase">Massage Chair</p>
               </div>
             </div>
             <p className="text-brown-300 text-sm leading-relaxed mt-4">
@@ -134,6 +134,10 @@ export default function Footer() {
               <div className="flex items-start gap-2.5 text-sm text-brown-300">
                 <MapPin className="w-4 h-4 shrink-0 mt-0.5" />
                 <span>Pan-India Delivery & Service</span>
+              </div>
+              <div className="flex items-start gap-2.5 text-sm text-brown-300">
+                <Clock className="w-4 h-4 shrink-0 mt-0.5" />
+                <span>Working Hours: 10:00 AM – 9:00 PM</span>
               </div>
               <a
                 href={getDefaultWhatsAppUrl()}
