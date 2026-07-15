@@ -112,7 +112,7 @@ export default function ReviewsPage() {
             sendToBackOnClick={true}
             autoplay={true}
             autoplayDelay={5000}
-            pauseOnHover={true}
+            pauseOnHover={false}
           />
         </div>
       </div>
