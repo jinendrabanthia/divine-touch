@@ -124,6 +124,62 @@ h1, h2, h3, h4, h5, h6 {
   color: transparent;
 }
 
+.hero-marquee-container {
+  overflow: hidden;
+}
+
+.hero-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 0.85rem 1.5rem;
+  min-width: max-content;
+  animation: hero-marquee 16s linear infinite;
+}
+
+.hero-marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  white-space: nowrap;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+@keyframes hero-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 1rem 0;
+  animation: marquee 18s linear infinite;
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  white-space: nowrap;
+  font-size: 0.95rem;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* ── Image Placeholder Pattern ───────────────────────── */
 .placeholder-pattern {
   background-image: 

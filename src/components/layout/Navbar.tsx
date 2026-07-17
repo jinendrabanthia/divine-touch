@@ -30,7 +30,7 @@ export default function Navbar() {
 
         {/* Center: Logo + Name (Highlighted) */}
         <div className="absolute left-1/2 -translate-x-1/2 z-40 pointer-events-auto flex items-center justify-center group">
-          <Link href="/" className="flex items-center gap-2 sm:gap-3">
+          <Link href="/" className="flex items-center gap-2 sm:gap-3 cursor-pointer" aria-label="Return to home page" role="button">
             <div className="relative flex-shrink-0">
               <div className="absolute inset-0 bg-gold-400 rounded-full blur-md opacity-20 group-hover:opacity-40 transition-opacity duration-300 scale-105" />
               <Image 
