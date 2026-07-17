@@ -1,4 +1,5 @@
 import HeroSection from "@/components/home/HeroSection";
+import HeroBenefitStrip from "@/components/home/HeroBenefitStrip";
 import TrustStrip from "@/components/home/TrustStrip";
 import ProductCarousel from "@/components/home/ProductCarousel";
 import CategoryTiles from "@/components/home/CategoryTiles";
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <HeroSection />
+      <HeroBenefitStrip />
       <ProductCarousel />
       <CategoryTiles />
       <TrustStrip />
