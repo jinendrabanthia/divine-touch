@@ -97,6 +97,12 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--color-gold-500);
 }
 
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-gold-400) var(--color-cream-100);
+}
+
 /* ── Reduced Motion ──────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -115,6 +121,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  color: transparent;
 }
 
 /* ── Image Placeholder Pattern ───────────────────────── */
