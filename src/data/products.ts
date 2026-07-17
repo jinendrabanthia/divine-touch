@@ -279,11 +279,7 @@ export const products: Product[] = [
       "Portable and lightweight",
     ],
     images: [
-      {
-        src: "/images/products/sample leg massager/sample leg massager.jpg",
-        alt: "Sample Leg Massager",
-        label: "Sample Leg Massager — front",
-      },
+      { src: "/images/products/sample-leg-massager/sample-leg-massager.jpg", alt: "Leg Massager Model L1", label: "Sample Leg Massager — front" },
     ],
     isSample: true,
   },
@@ -300,11 +296,7 @@ export const products: Product[] = [
       "Rechargeable battery",
     ],
     images: [
-      {
-        src: "/images/products/sample back massager/sample back massager.jpg",
-        alt: "Sample Back Massager",
-        label: "Sample Back Massager — front",
-      },
+      { src: "/images/products/sample-back-massager/sample-back-massager.jpg", alt: "Back Massager Model B1", label: "Sample Back Massager — front" },
     ],
     isSample: true,
   },
@@ -325,11 +317,7 @@ export const products: Product[] = [
       "Fits up to size 12",
     ],
     images: [
-      {
-        src: "/images/products/sample foot massager/sample foot massager.jpg",
-        alt: "Sample Foot Massager",
-        label: "Sample Foot Massager — front",
-      },
+      { src: "/images/products/sample-foot-massager/sample-foot-massager.jpg", alt: "Foot Massager Model F1", label: "Sample Foot Massager — front" },
     ],
     isSample: true,
   },
@@ -346,11 +334,7 @@ export const products: Product[] = [
       "Timer function",
     ],
     images: [
-      {
-        src: "/images/products/sample neck massager/sample neck massager.jpg",
-        alt: "Sample Neck Massager",
-        label: "Sample Neck Massager — front",
-      },
+      { src: "/images/products/sample-neck-massager/sample-neck-massager.jpg", alt: "Neck Massager Model N1", label: "Sample Neck Massager — front" },
     ],
     isSample: true,
   },
@@ -371,11 +355,7 @@ export const products: Product[] = [
       "IPX7 waterproof",
     ],
     images: [
-      {
-        src: "/images/products/sample scalp massager 1/scalp massager.jpg",
-        alt: "Sample Scalp Massager 1",
-        label: "Sample Scalp Massager 1 — front",
-      },
+      { src: "/images/products/sample-scalp-massager-1/sample-scalp-massager.jpg", alt: "Scalp Massager Model S1", label: "Sample Scalp Massager 1 — front" },
     ],
     isSample: true,
   },
@@ -392,11 +372,7 @@ export const products: Product[] = [
       "Battery operated",
     ],
     images: [
-      {
-        src: "/images/products/sample eye massager 2/eye massager.jpg",
-        alt: "Sample Eye Massager",
-        label: "Sample Eye Massager — front",
-      },
+      { src: "/images/products/sample-eye-massager-2/sample-eye-massager.jpg", alt: "Eye Massager Model E1", label: "Sample Eye Massager — front" },
     ],
     isSample: true,
   },
