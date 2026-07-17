@@ -34,6 +34,15 @@ export default function VideoShowcase() {
           <motion.div 
             style={{ scale }}
             className="relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl group cursor-pointer border border-white/10"
+            onClick={() => window.open("https://www.instagram.com/reel/DaLX32cPXL7/", "_blank", "noopener,noreferrer")}
+            role="button"
+            tabIndex={0}
+            aria-label="Watch Divine Touch product video on Instagram"
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                window.open("https://www.instagram.com/reel/DaLX32cPXL7/", "_blank", "noopener,noreferrer");
+              }
+            }}
           >
             {/* Parallax Background Image */}
             <motion.div style={{ y }} className="absolute inset-0 w-full h-[120%] -top-[10%]">
